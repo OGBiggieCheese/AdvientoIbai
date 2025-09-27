@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "server": "json-server --watch src/services/database.json --port 3001"
+    "server": "json-server --watch src/services/database.json --port 3001 --host 0.0.0.0"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.3",
