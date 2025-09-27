@@ -1,0 +1,121 @@
+@use '../../scss/_variables.scss' as *;
+@use '../../scss/_mixins.scss' as *;
+
+.votarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.voteButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #6B4433;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 100px;
+  border: 2px solid var(--color-black);
+  border-bottom: 6px solid var(--color-black);
+  
+  &:hover:not(:disabled) {
+    border: 2px solid var(--color-yellow);
+    border-bottom: 6px solid var(--color-yellow);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  &:disabled {
+    background: linear-gradient(135deg, #4a4a4a, #6a6a6a);
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .voteUp {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1;
+    border: 1px solid var(--color-black);
+    border-bottom: 4px solid var(--color-black);
+    border-radius: 50%;
+    padding: 0.25rem;
+    justify-content: center;
+    background-color: #977567;
+
+
+    &:hover {
+      background-color: var(--color-yellow);
+      color: var(--color-black);
+    }
+  }
+
+}
+
+.voteCount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.voteText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-dark);
+  line-height: 1;
+}
+
+
+@include mobile {
+  .votarItem {
+    padding: 1rem;
+  }
+  
+  .imageContainer {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .voteButton {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
