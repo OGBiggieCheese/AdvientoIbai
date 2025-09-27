@@ -40,15 +40,16 @@
 }
 
 .votarContainer {
-  max-width: 100%;
   width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
   display: grid;
   grid-template-columns: 1fr 50%;
   gap: 2rem;
-  align-items: start;
+  justify-items: center;
   box-sizing: border-box;
+  max-width: 1200px;
+
 }
 
 .votarItemsContainer {
