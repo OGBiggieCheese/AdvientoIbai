@@ -12,7 +12,7 @@
       "name": "Calcetín Navideño",
       "image": "/src/assets/Chocolates/calcetin_navideno.webp",
       "alt": "Calcetín Navideño",
-      "votes": 4
+      "votes": 5
     },
     {
       "id": "3",
@@ -134,6 +134,11 @@
       "id": "5b18",
       "chocolateId": "3",
       "timestamp": "2025-09-27T22:40:41.546Z"
+    },
+    {
+      "id": "b328",
+      "chocolateId": "2",
+      "timestamp": "2025-09-27T23:43:00.375Z"
     }
   ]
 }

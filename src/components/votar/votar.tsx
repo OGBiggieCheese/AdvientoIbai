@@ -9,6 +9,8 @@ const Votar = () => {
   const [votedItems, setVotedItems] = useState<Set<string>>(new Set())
   const [chocolates, setChocolates] = useState<Chocolate[]>([])
   const [loading, setLoading] = useState(true)
+  const [errorMessage, setErrorMessage] = useState<string>('')
+  const [lastVoteTime, setLastVoteTime] = useState<number>(0)
 
   useEffect(() => {
     const loadChocolates = async () => {
@@ -32,6 +34,16 @@ const Votar = () => {
   }, [chocolates])
 
   const handleVote = async (id: string) => {
+    const now = Date.now()
+    const timeSinceLastVote = now - lastVoteTime
+    const twentyFourMinutes = 24 * 60 * 1000
+
+    if (timeSinceLastVote < twentyFourMinutes) {
+      setErrorMessage('Debes esperar 24 minutos entre votos')
+      setTimeout(() => setErrorMessage(''), 3000)
+      return
+    }
+
     try {
       await createVote(id)
       
@@ -44,6 +56,7 @@ const Votar = () => {
           prev.map(c => c.id === id ? { ...c, votes: newVotes } : c)
         )
         setVotedItems(prev => new Set([...prev, id]))
+        setLastVoteTime(now)
       }
     } catch (error) {
       console.error('Error al votar:', error)
@@ -55,7 +68,13 @@ const Votar = () => {
     <img src={chocolateImage} alt="Chocolate" className={styles.chocolateImage} />
     <section className={styles.votar}>
       <h2 className={styles.title}>¡Vota tu chocolatina favorita!</h2>
-      <h3 className={styles.subtitle}>Solo puedes votar una vez cada 24 hs</h3>
+      <h3 className={styles.subtitle}>Solo puedes votar una vez cada 24 minutos</h3>
+      
+      {errorMessage && (
+        <div className={styles.errorMessage}>
+          {errorMessage}
+        </div>
+      )}
 
       <div className={styles.votarContainer}>
         <div className={styles.votarItemsContainer}>
