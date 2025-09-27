@@ -37,7 +37,7 @@
   transition: transform 0.3s ease;
   
   &:hover {
-    background: radial-gradient(circle, var(--color-yellow) 0%, transparent 45%);
+    background: radial-gradient(circle, var(--color-yellow) 0%, transparent 50%);
     transform: scale(1.1) rotate(5deg);
 
   }
