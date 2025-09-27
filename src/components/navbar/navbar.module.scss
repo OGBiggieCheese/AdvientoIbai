@@ -3,7 +3,7 @@
 .navbar {
   position: sticky;
   top: 8px;
-  background-color: #8B5CF6; // Violet color
+  background-color: var(--color-purple);
   padding: 1rem 0;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -42,7 +42,7 @@
 }
 
 .navButton {
-  background-color: var(--color-purple-button); // Lighter violet
+  background-color: var(--color-purple-button);
   color: white;
   border: none;
   padding: 4px 16px;
@@ -53,7 +53,7 @@
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: var(--color-purple-button); // Even lighter violet on hover
+    background-color: var(--color-purple-button);
     transform: rotate(0.7deg);
     opacity: 0.8;
   }
@@ -63,7 +63,7 @@
   }
 }
 
-// Responsive design
+
 @media (max-width: 768px) {
   .navbarContainer {
     flex-direction: column;
