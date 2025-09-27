@@ -1,0 +1,68 @@
+{
+  "chocolates": [
+    {
+      "id": "1",
+      "name": "Chocolatina 1",
+      "image": "https://picsum.photos/200/300?random=1",
+      "alt": "Chocolatina 1",
+      "votes": 0
+    },
+    {
+      "id": "2", 
+      "name": "Chocolatina 2",
+      "image": "https://picsum.photos/200/300?random=2",
+      "alt": "Chocolatina 2",
+      "votes": 0
+    },
+    {
+      "id": "3",
+      "name": "Chocolatina 3", 
+      "image": "https://picsum.photos/200/300?random=3",
+      "alt": "Chocolatina 3",
+      "votes": 0
+    },
+    {
+      "id": "4",
+      "name": "Chocolatina 4",
+      "image": "https://picsum.photos/200/300?random=4", 
+      "alt": "Chocolatina 4",
+      "votes": 0
+    },
+    {
+      "id": "5",
+      "name": "Chocolatina 5",
+      "image": "https://picsum.photos/200/300?random=5",
+      "alt": "Chocolatina 5", 
+      "votes": 0
+    },
+    {
+      "id": "6",
+      "name": "Chocolatina 6",
+      "image": "https://picsum.photos/200/300?random=6",
+      "alt": "Chocolatina 6",
+      "votes": 0
+    },
+    {
+      "id": "7", 
+      "name": "Chocolatina 7",
+      "image": "https://picsum.photos/200/300?random=7",
+      "alt": "Chocolatina 7",
+      "votes": 0
+    },
+    {
+      "id": "8",
+      "name": "Chocolatina 8",
+      "image": "https://picsum.photos/200/300?random=8",
+      "alt": "Chocolatina 8",
+      "votes": 0
+    },
+    {
+      "id": "9",
+      "name": "Chocolatina 9", 
+      "image": "https://picsum.photos/200/300?random=9",
+      "alt": "Chocolatina 9",
+      "votes": 0
+    }
+  ],
+  "votes": []
+}

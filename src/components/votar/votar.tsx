@@ -1,43 +1,53 @@
 import styles from './votar.module.scss'
 import VotarItem from '../votarItem/votarItem'
 import Podium from '../votarPodium/podium'
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import chocolateImage from '../../assets/chocolate.webp'
+import { getChocolates, updateChocolateVotes, createVote, type Chocolate } from '../../services/api'
 
 const Votar = () => {
   const [votedItems, setVotedItems] = useState<Set<string>>(new Set())
-  const [chocolateVotes, setChocolateVotes] = useState<Record<string, number>>({})
+  const [chocolates, setChocolates] = useState<Chocolate[]>([])
+  const [loading, setLoading] = useState(true)
 
-  const baseChocolates = [
-    { id: '1', name: 'Chocolatina 1', image: 'https://picsum.photos/200/300?random=1', alt: 'Chocolatina 1' },
-    { id: '2', name: 'Chocolatina 2', image: 'https://picsum.photos/200/300?random=2', alt: 'Chocolatina 2' },
-    { id: '3', name: 'Chocolatina 3', image: 'https://picsum.photos/200/300?random=3', alt: 'Chocolatina 3' },
-    { id: '4', name: 'Chocolatina 4', image: 'https://picsum.photos/200/300?random=4', alt: 'Chocolatina 4' },
-    { id: '5', name: 'Chocolatina 5', image: 'https://picsum.photos/200/300?random=5', alt: 'Chocolatina 5' },
-    { id: '6', name: 'Chocolatina 6', image: 'https://picsum.photos/200/300?random=6', alt: 'Chocolatina 6' },
-    { id: '7', name: 'Chocolatina 7', image: 'https://picsum.photos/200/300?random=7', alt: 'Chocolatina 7' },
-    { id: '8', name: 'Chocolatina 8', image: 'https://picsum.photos/200/300?random=8', alt: 'Chocolatina 8' },
-    { id: '9', name: 'Chocolatina 9', image: 'https://picsum.photos/200/300?random=9', alt: 'Chocolatina 9' }
-  ]
+  useEffect(() => {
+    const loadChocolates = async () => {
+      try {
+        const data = await getChocolates()
+        setChocolates(data)
+        setLoading(false)
+      } catch (error) {
+        console.error('Error al cargar las chocolatinas:', error)
+        setLoading(false)
+      }
+    }
+    loadChocolates()
+  }, [])
 
   const topChocolates = useMemo(() => {
-    return baseChocolates
-      .map(chocolate => ({
-        ...chocolate,
-        votes: chocolateVotes[chocolate.id] || 0
-      }))
+    return chocolates
       .sort((a, b) => b.votes - a.votes)
       .slice(0, 3)
       .filter(chocolate => chocolate.votes > 0)
-  }, [chocolateVotes])
+  }, [chocolates])
 
-  const handleVote = (id: string) => {
-    setVotedItems(prev => new Set([...prev, id]))
-    setChocolateVotes(prev => ({
-      ...prev,
-      [id]: (prev[id] || 0) + 1
-    }))
-    console.log(`Voted for item: ${id}`)
+  const handleVote = async (id: string) => {
+    try {
+      await createVote(id)
+      
+      const chocolate = chocolates.find(c => c.id === id)
+      if (chocolate) {
+        const newVotes = chocolate.votes + 1
+        await updateChocolateVotes(id, newVotes)
+        
+        setChocolates(prev => 
+          prev.map(c => c.id === id ? { ...c, votes: newVotes } : c)
+        )
+        setVotedItems(prev => new Set([...prev, id]))
+      }
+    } catch (error) {
+      console.error('Error al votar:', error)
+    }
   }
 
   return (
@@ -49,16 +59,20 @@ const Votar = () => {
 
       <div className={styles.votarContainer}>
         <div className={styles.votarItemsContainer}>
-          {baseChocolates.map((chocolate) => (
-            <VotarItem
-              key={chocolate.id}
-              image={chocolate.image}
-              alt={chocolate.alt}
-              onVote={() => handleVote(chocolate.id)}
-              isVoted={votedItems.has(chocolate.id)}
-              voteCount={chocolateVotes[chocolate.id] || 0}
-            />
-          ))}
+          {loading ? (
+            <p>Cargando chocolatinas...</p>
+          ) : (
+            chocolates.map((chocolate) => (
+              <VotarItem
+                key={chocolate.id}
+                image={chocolate.image}
+                alt={chocolate.alt}
+                onVote={() => handleVote(chocolate.id)}
+                isVoted={votedItems.has(chocolate.id)}
+                voteCount={chocolate.votes}
+              />
+            ))
+          )}
         </div>
 
         <div className={styles.votarTop}>
