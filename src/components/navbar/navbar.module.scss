@@ -1,0 +1,84 @@
+@import '../../scss/_base.scss';
+
+.navbar {
+  position: sticky;
+  top: 8px;
+  background-color: #8B5CF6; // Violet color
+  padding: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.navButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.logoImage {
+  width: 100px;
+  height: 28px;
+  margin-right: 16px;
+}
+
+.navButton {
+  background-color: var(--color-purple-button); // Lighter violet
+  color: white;
+  border: none;
+  padding: 4px 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: var(--color-purple-button); // Even lighter violet on hover
+    transform: rotate(0.7deg);
+    opacity: 0.8;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .navbarContainer {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .navButtons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .navButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
