@@ -1,4 +1,5 @@
 import Navbar from './components/navbar/navbar'
+import Information from './components/information/information'
 import './App.css'
 
 function App() {
@@ -6,10 +7,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div>
-        <h1>Adviento ibai</h1>
- 
-      </div>
+      <Information />
     </>
   )
 }
