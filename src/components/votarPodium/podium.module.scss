@@ -128,12 +128,13 @@
   width: 80px;
   height: 80px;
   border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
   transition: transform 0.3s ease;
   
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.1) rotate(5deg);
+    background: radial-gradient(circle, var(--color-yellow) 0%, transparent 50%);
+
   }
 }
 

@@ -1,0 +1,144 @@
+{
+  "chocolates": [
+    {
+      "id": "1",
+      "name": "Big Ibai",
+      "image": "/src/assets/Chocolates/big_ibai.webp",
+      "alt": "Big Ibai",
+      "votes": 7
+    },
+    {
+      "id": "2",
+      "name": "Calcetín Navideño",
+      "image": "/src/assets/Chocolates/calcetin_navideno.webp",
+      "alt": "Calcetín Navideño",
+      "votes": 5
+    },
+    {
+      "id": "3",
+      "name": "Camiseta de Fútbol",
+      "image": "/src/assets/Chocolates/camiseta_de_futbol.webp",
+      "alt": "Camiseta de Fútbol",
+      "votes": 3
+    },
+    {
+      "id": "4",
+      "name": "Cerdito",
+      "image": "/src/assets/Chocolates/cerdito.webp",
+      "alt": "Cerdito",
+      "votes": 0
+    },
+    {
+      "id": "5",
+      "name": "Guante de Box",
+      "image": "/src/assets/Chocolates/guante_de_box.webp",
+      "alt": "Guante de Box",
+      "votes": 0
+    },
+    {
+      "id": "6",
+      "name": "Ibai Regalos",
+      "image": "/src/assets/Chocolates/ibai_regalos.webp",
+      "alt": "Ibai Regalos",
+      "votes": 0
+    },
+    {
+      "id": "7",
+      "name": "Kena",
+      "image": "/src/assets/Chocolates/kena.webp",
+      "alt": "Kena",
+      "votes": 0
+    },
+    {
+      "id": "8",
+      "name": "Muñeco de Nieve",
+      "image": "/src/assets/Chocolates/muneco_de_nieve.webp",
+      "alt": "Muñeco de Nieve",
+      "votes": 0
+    },
+    {
+      "id": "9",
+      "name": "Si te ríes pierdes",
+      "image": "/src/assets/Chocolates/si_te_ries_pierdes.webp",
+      "alt": "Si te ríes pierdes",
+      "votes": 0
+    }
+  ],
+  "votes": [
+    {
+      "id": "50bc",
+      "chocolateId": "1",
+      "timestamp": "2025-09-27T22:40:38.663Z"
+    },
+    {
+      "id": "59a2",
+      "chocolateId": "1",
+      "timestamp": "2025-09-27T22:40:39.274Z"
+    },
+    {
+      "id": "cbac",
+      "chocolateId": "1",
+      "timestamp": "2025-09-27T22:40:39.423Z"
+    },
+    {
+      "id": "8514",
+      "chocolateId": "1",
+      "timestamp": "2025-09-27T22:40:39.566Z"
+    },
+    {
+      "id": "ab2a",
+      "chocolateId": "1",
+      "timestamp": "2025-09-27T22:40:39.722Z"
+    },
+    {
+      "id": "9724",
+      "chocolateId": "1",
+      "timestamp": "2025-09-27T22:40:39.849Z"
+    },
+    {
+      "id": "b060",
+      "chocolateId": "1",
+      "timestamp": "2025-09-27T22:40:39.972Z"
+    },
+    {
+      "id": "30cd",
+      "chocolateId": "2",
+      "timestamp": "2025-09-27T22:40:40.477Z"
+    },
+    {
+      "id": "16d1",
+      "chocolateId": "2",
+      "timestamp": "2025-09-27T22:40:40.647Z"
+    },
+    {
+      "id": "fe3c",
+      "chocolateId": "2",
+      "timestamp": "2025-09-27T22:40:40.813Z"
+    },
+    {
+      "id": "c0e1",
+      "chocolateId": "2",
+      "timestamp": "2025-09-27T22:40:40.970Z"
+    },
+    {
+      "id": "8cb1",
+      "chocolateId": "3",
+      "timestamp": "2025-09-27T22:40:41.252Z"
+    },
+    {
+      "id": "503c",
+      "chocolateId": "3",
+      "timestamp": "2025-09-27T22:40:41.403Z"
+    },
+    {
+      "id": "5b18",
+      "chocolateId": "3",
+      "timestamp": "2025-09-27T22:40:41.546Z"
+    },
+    {
+      "id": "b328",
+      "chocolateId": "2",
+      "timestamp": "2025-09-27T23:43:00.375Z"
+    }
+  ]
+}
