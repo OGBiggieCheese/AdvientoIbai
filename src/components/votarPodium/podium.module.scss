@@ -134,7 +134,6 @@
   &:hover {
     transform: scale(1.1) rotate(5deg);
     background: radial-gradient(circle, var(--color-yellow) 0%, transparent 50%);
-
   }
 }
 
@@ -164,15 +163,6 @@
     min-height: 150px;
   }
   
-  .podiumBox {
-    width: 50px;
-    height: 35px;
-  }
-  
-  .firstPlace .podiumBox { height: 50px; }
-  .secondPlace .podiumBox { height: 40px; }
-  .thirdPlace .podiumBox { height: 35px; }
-  
   .chocolateImage {
     width: var(--image-size-mobile);
     height: var(--image-size-mobile);
@@ -181,11 +171,6 @@
   .firstPlace .chocolateImage {
     width: var(--image-size-mobile-first);
     height: var(--image-size-mobile-first);
-  }
-  
-  .chocolateName {
-    font-size: 0.8rem;
-    max-width: 80px;
   }
   
   .voteCount {

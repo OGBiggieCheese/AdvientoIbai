@@ -15,7 +15,6 @@
   transition: all 0.3s ease;
   width: 100%;
   box-sizing: border-box;
-
 }
 
 .imageContainer {
@@ -39,7 +38,6 @@
   &:hover {
     background: radial-gradient(circle, var(--color-yellow) 0%, transparent 50%);
     transform: scale(1.1) rotate(5deg);
-
   }
 }
 
@@ -76,27 +74,24 @@
     cursor: not-allowed;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
+}
 
+.voteUp {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1;
+  border: 1px solid var(--color-black);
+  border-bottom: 4px solid var(--color-black);
+  border-radius: 50%;
+  padding: 0.25rem;
+  justify-content: center;
+  background-color: #977567;
 
-  .voteUp {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--color-white);
-    line-height: 1;
-    border: 1px solid var(--color-black);
-    border-bottom: 4px solid var(--color-black);
-    border-radius: 50%;
-    padding: 0.25rem;
-    justify-content: center;
-    background-color: #977567;
-
-
-    &:hover {
-      background-color: var(--color-yellow);
-      color: var(--color-black);
-    }
+  &:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
   }
-
 }
 
 .voteCount {
@@ -112,7 +107,6 @@
   color: var(--color-dark);
   line-height: 1;
 }
-
 
 @include mobile {
   .votarItem {

@@ -2,6 +2,8 @@ import Navbar from './components/navbar/navbar'
 import Information from './components/information/information'
 import './App.css'
 import Votar from './components/votar/votar'
+import AdvientoCalendar from './components/advientoCalendar/advientoCalendar'
+import { advientoDays } from './data/advientoData'
 
 function App() {
 
@@ -10,6 +12,7 @@ function App() {
       <Navbar />
       <Information />
       <Votar  />
+      <AdvientoCalendar days={advientoDays} />
     </>
   )
 }
