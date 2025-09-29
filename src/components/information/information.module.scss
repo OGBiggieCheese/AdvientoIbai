@@ -2,7 +2,7 @@
 
 .information {
   background-color: var(--color-purple);
-  padding: 4rem 2rem;
+  padding: 12rem 2rem 4rem 2rem;
   min-height: 60vh;
   display: flex;
   flex-direction: column;
@@ -131,6 +131,10 @@
 }
 
 @media (max-width: 768px) {
+  .information {
+    padding: 5rem 1rem 4rem 1rem;
+  }
+  
   .logo {
     width: 400px;
   }

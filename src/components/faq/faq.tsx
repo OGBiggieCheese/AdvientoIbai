@@ -35,7 +35,7 @@ const faqData: FAQItem[] = [
 
 const FAQ: React.FC = () => {
   return (
-    <section className={styles.faq}>
+    <section id="faq" className={styles.faq}>
       <div className={styles.container}>
         <h2 className={styles.title}>Preguntas Frecuentes</h2>
         <div className={styles.faqGrid}>

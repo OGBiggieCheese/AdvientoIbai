@@ -52,7 +52,7 @@ const Testimonios = () => {
   return (
     <>
     <img src={chocolateImage} alt="Chocolate" className={styles.chocolateImage} />
-    <section className={styles.testimonios}>
+    <section id="testimonios" className={styles.testimonios}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>Testimonios</h2>
