@@ -1,3 +1,20 @@
+# Realizar los siguientes pasos:
+1. **Instalar las dependencias**  
+   ```bash
+   npm install
+   ``` 
+
+2. **Inicia el servidor de desarrollo**
+   ```bash
+   npm run dev
+   ```
+
+3. **Inicia el servidor de base de datos (en otra terminal)**
+   ```bash
+   npm run server
+   ```
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
