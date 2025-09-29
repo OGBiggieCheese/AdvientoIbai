@@ -35,3 +35,10 @@ export interface AdvientoDay {
   alt: string
   isOpen: boolean
 }
+
+export interface TestimonioData {
+  id: string
+  texto: string
+  ganador: string
+  casilla: number
+}

@@ -1,0 +1,89 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.testimonios {
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-testimonio-title);
+    margin: 0;
+    position: relative;
+  }
+
+  .testimoniosList {
+    column-count: 3;
+    column-gap: 8px;
+    margin-top: 40px;
+    
+    > * {
+      break-inside: avoid;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.chocolateImage {
+  width: 100%;
+  max-width: 100vw;
+  rotate: 180deg;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0rem !important;
+}
+
+@include mobile {
+  .testimonios {
+    padding: 40px 0;
+
+    .container {
+      padding: 0 15px;
+    }
+
+    .header {
+      margin-bottom: 30px;
+    }
+
+    .chocolateImage {
+      width: 60px;
+      height: 60px;
+    }
+
+    .title {
+      font-size: 2.2rem;
+    }
+
+    .testimoniosList {
+      column-count: 1;
+      column-gap: 8px;
+      margin-top: 30px;
+    }
+  }
+}
+
+@include tablet {
+  .testimonios {
+    .testimoniosList {
+      column-count: 2;
+      column-gap: 8px;
+    }
+  }
+}

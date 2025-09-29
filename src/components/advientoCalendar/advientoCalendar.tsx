@@ -6,7 +6,6 @@ interface AdvientoCalendarProps {
 }
 
 const AdvientoCalendar = ({ days }: AdvientoCalendarProps) => {
-  // Define size classes for each day using CSS Grid
   const getSizeClass = (day: number) => {
     const sizeMap: { [key: number]: string } = {
       1: 'square', 2: 'rectangle', 3: 'square', 4: 'rectangleVertical', 5: 'square', 6: 'square', 7: 'rectangle',
