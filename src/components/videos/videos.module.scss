@@ -1,0 +1,130 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.videos {
+  padding: 60px 0;
+  position: relative;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-testimonio-title);
+    margin: 0;
+    position: relative;
+  }
+
+  .videosList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .videoItem {
+    position: relative;
+  }
+
+  .videoContainer {
+    position: relative;
+    width: 320px;
+    height: 568px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .playButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background: var(--color-yellow);
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    svg {
+      color: var(--color-black);
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@include mobile {
+  .videos {
+    padding: 40px 0;
+
+    .container {
+      padding: 0 15px;
+    }
+
+    .header {
+      margin-bottom: 30px;
+    }
+
+    .title {
+      font-size: 2.2rem;
+    }
+
+    .videosList {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .videoContainer {
+      width: 280px;
+      height: 500px;
+    }
+  }
+}
+
+@include tablet {
+  .videos {
+    .videosList {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+}
