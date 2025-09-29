@@ -67,7 +67,7 @@
     right: 20px;
     width: 50px;
     height: 50px;
-    background: var(--color-testimonio-accent);
+    background: var(--color-white);
     border: none;
     border-radius: 50%;
     display: flex;
@@ -78,15 +78,15 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
     &:hover {
-      background: var(--color-testimonio-title);
+      background: var(--color-yellow);
       transform: scale(1.1);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
 
     svg {
-      color: var(--color-white);
-      width: 20px;
-      height: 20px;
+      color: var(--color-black);
+      width: 40px;
+      height: 40px;
     }
   }
 }
