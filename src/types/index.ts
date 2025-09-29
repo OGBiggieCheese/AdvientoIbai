@@ -25,3 +25,13 @@ export interface VotarItemProps {
   isVoted?: boolean
   voteCount?: number
 }
+
+export interface AdvientoDay {
+  day: number
+  prize: string
+  winner: string
+  description: string
+  image: string
+  alt: string
+  isOpen: boolean
+}

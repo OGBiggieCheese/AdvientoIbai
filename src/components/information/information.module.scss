@@ -23,12 +23,13 @@
 
 .contentContainer {
   display: flex;
-  align-items: flex-start;
-  gap: 4rem;
-  max-width: 100%;
-  width: 100%;
-  padding: 0 1rem;
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: max-content;
+  padding: 2rem;
+  background: radial-gradient(circle, rgba(149, 147, 217, 0.4) 0%, transparent 45%);  
+  border-radius: 50%;
 }
 
 .leftColumn {
@@ -66,28 +67,32 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  background-color: var(--color-yellow);
+  color: black;
+  max-width: 100%;
+  width: min(350px, 90vw);
+  border-radius: 20px;
+  box-shadow: 0 4px black;
 }
 
 .newLabel {
-  background-color: var(--color-white);
-  color: var(--color-purple);
+  background-color: var(--color-yellow);
+  color: var(--color-white);
   padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  position: relative;
-  
-  .smallLabel {
-    background-color: var(--color-purple);
-    color: var(--color-white);
-    padding: 0.2rem 0.5rem;
-    border-radius: 10px;
-    font-size: 0.7rem;
-    font-weight: bold;
-    position: absolute;
-    top: -8px;
-    right: -8px;
-  }
+  border-radius: 10px;
+  font-size: 0.7rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.smallLabel {
+  background-color: #f7c729 !important;
+  color: var(--color-white);
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  top: 4px !important;
 }
 
 .mainLabel {
@@ -97,7 +102,7 @@
   padding: 1rem;
   font-weight: lighter !important;
   position: relative;
-  box-shadow: 0 4px  black;
+  box-shadow: 0 4px black;
   
   .mainText {
     font-size: 1.6rem;
@@ -117,48 +122,6 @@
     border-right: 15px solid var(--color-purple-light);
   }
 }
-
-.labelContainer {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background-color: var(--color-yellow);
-  color: black;
-  max-width: 100%;
-  width: min(350px, 90vw);
-  border-radius: 20px;
-  box-shadow: 0 4px black;
-}
-.contentContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  width: max-content;
-  padding: 2rem;
-  background: radial-gradient(circle, rgba(149, 147, 217, 0.4) 0%, transparent 45%);  
-  border-radius: 50%;
-  
-}
-
-.newLabel {
-  background-color: var(--color-yellow);
-  color: var(--color-white);
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  font-size: 0.7rem;
-  padding-right: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
- .smallLabel {
-   background-color: #f7c729 !important ;
-   color: var(--color-white);
-   padding: 0.2rem 0.5rem;
-   border-radius: 10px;
-   font-size: 0.7rem;
-   top: 4px !important;
- }
 
 .voteText {
   color: black;
