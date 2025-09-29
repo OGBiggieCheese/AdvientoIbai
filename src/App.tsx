@@ -6,6 +6,7 @@ import AdvientoCalendar from './components/advientoCalendar/advientoCalendar'
 import Testimonios from './components/testimonios/testimonios'
 import Videos from './components/videos/videos'
 import FAQ from './components/faq/faq'
+import Footer from './components/footer/footer'
 import { advientoDays } from './data/advientoData'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Testimonios />
       <Videos />
       <FAQ />
+      <Footer />
     </>
   )
 }

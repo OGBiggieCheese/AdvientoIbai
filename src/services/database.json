@@ -19,7 +19,7 @@
       "name": "Camiseta de Fútbol",
       "image": "/src/assets/Chocolates/camiseta_de_futbol.webp",
       "alt": "Camiseta de Fútbol",
-      "votes": 3
+      "votes": 4
     },
     {
       "id": "4",
@@ -139,6 +139,11 @@
       "id": "b328",
       "chocolateId": "2",
       "timestamp": "2025-09-27T23:43:00.375Z"
+    },
+    {
+      "id": "f92d",
+      "chocolateId": "3",
+      "timestamp": "2025-09-29T15:55:10.143Z"
     }
   ]
 }
