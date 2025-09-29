@@ -3,6 +3,7 @@ import Information from './components/information/information'
 import './App.css'
 import Votar from './components/votar/votar'
 import AdvientoCalendar from './components/advientoCalendar/advientoCalendar'
+import Testimonios from './components/testimonios/testimonios'
 import { advientoDays } from './data/advientoData'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Information />
       <Votar  />
       <AdvientoCalendar days={advientoDays} />
+      <Testimonios />
     </>
   )
 }
