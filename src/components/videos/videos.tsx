@@ -36,7 +36,7 @@ const videosData: VideoData[] = [
 
 const Videos = () => {
   return (
-    <section className={styles.videos}>
+    <section id="videos" className={styles.videos}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>Videos en redes sociales</h2>

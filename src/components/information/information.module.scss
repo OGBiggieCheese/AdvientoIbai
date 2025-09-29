@@ -2,7 +2,7 @@
 
 .information {
   background-color: var(--color-purple);
-  padding: 4rem 2rem;
+  padding: 12rem 2rem 4rem 2rem;
   min-height: 60vh;
   display: flex;
   flex-direction: column;
@@ -73,25 +73,23 @@
   width: min(350px, 90vw);
   border-radius: 20px;
   box-shadow: 0 4px black;
+  place-self: end;
 }
 
 .newLabel {
   background-color: var(--color-yellow);
   color: var(--color-white);
-  padding: 0.5rem 1rem;
   border-radius: 10px;
   font-size: 0.7rem;
-  padding-right: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-left: 1rem;
 }
 
 .smallLabel {
   background-color: #f7c729 !important;
-  color: var(--color-white);
+  color: var(--color-black);
   padding: 0.2rem 0.5rem;
   border-radius: 10px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   top: 4px !important;
 }
 
@@ -131,6 +129,10 @@
 }
 
 @media (max-width: 768px) {
+  .information {
+    padding: 5rem 1rem 4rem 1rem;
+  }
+  
   .logo {
     width: 400px;
   }

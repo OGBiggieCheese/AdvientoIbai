@@ -66,7 +66,7 @@ const Votar = () => {
   return (
     <>
     <img src={chocolateImage} alt="Chocolate" className={styles.chocolateImage} />
-    <section className={styles.votar}>
+    <section id="votar" className={styles.votar}>
       <h2 className={styles.title}>¡Vota tu chocolatina favorita!</h2>
       <h3 className={styles.subtitle}>Solo puedes votar una vez cada 24 minutos</h3>
       
