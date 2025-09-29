@@ -73,25 +73,23 @@
   width: min(350px, 90vw);
   border-radius: 20px;
   box-shadow: 0 4px black;
+  place-self: end;
 }
 
 .newLabel {
   background-color: var(--color-yellow);
   color: var(--color-white);
-  padding: 0.5rem 1rem;
   border-radius: 10px;
   font-size: 0.7rem;
-  padding-right: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-left: 1rem;
 }
 
 .smallLabel {
   background-color: #f7c729 !important;
-  color: var(--color-white);
+  color: var(--color-black);
   padding: 0.2rem 0.5rem;
   border-radius: 10px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   top: 4px !important;
 }
 
