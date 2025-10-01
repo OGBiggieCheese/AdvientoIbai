@@ -1,4 +1,4 @@
-# Todo esta en la rama <development>
+# Todo esta en la rama development
 
 # React + TypeScript + Vite
 
